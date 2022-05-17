@@ -1,0 +1,14 @@
+{
+  "name": "genetic-algorithm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yanakushnerova/genetic-algorithm.git",
+  "author": "Yana Kushnerova <yanakushneriova@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "serve": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}

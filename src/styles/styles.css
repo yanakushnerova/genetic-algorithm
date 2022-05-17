@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+}
+
+.container {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    width: 200px;
+    height: 35px;
+    font-size: large;
+}
+
+#solution {
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+}
+
+#solution-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
