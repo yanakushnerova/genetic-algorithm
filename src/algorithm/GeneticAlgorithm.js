@@ -16,14 +16,9 @@ export default class GeneticAlgorithm {
         this.currentFitnessValues = []
     }
 
-    getPopulation() {
-        console.log(this.population.map((chr) => chr.chromosome), "--", this.population.map((chr) => chr.getFitness()))
-    }
-
     selection() {
-        const bestOffspring = this.population.sort((a, b) => b.getFitness() - a.getFitness())[0];
-
-        this.population[this.population.length - 1] = bestOffspring;
+        const bestOffspring = this.population.sort((a, b) => b.getFitness() - a.getFitness())[0]
+        this.population[this.population.length - 1] = bestOffspring
     }
 
     crossover() {
@@ -60,7 +55,7 @@ export default class GeneticAlgorithm {
         this.mutation()
 
         this.currentFitnessValues = this.population.map(individual => individual.getFitness());
-        this.meanFitnessValues.push(this.currentFitnessValues.reduce((acc, cur) => acc + cur, 0) / this.population.length);
-        this.maxFitnessValues.push(Math.max(...this.currentFitnessValues));
+        this.meanFitnessValues.push(this.currentFitnessValues.reduce((acc, cur) => acc + cur, 0) / this.population.length)
+        this.maxFitnessValues.push(Math.max(...this.currentFitnessValues))
     }
 }

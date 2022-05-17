@@ -8,7 +8,13 @@ export default class Chromosome {
     }
 
     getFitness() {
-        this.fitness = this.chromosome.reduce((a, b) => a + b, 0)
+        this.x = parseInt(this.chromosome.slice(0, this.chromosome.length / 2).join(''), 2);
+        this.y = parseInt(this.chromosome.slice(this.chromosome.length / 2).join(''), 2);
+
+        // this.fitness = this.chromosome.reduce((a, b) => a + b, 0)
+        // this.fitness = this.x ** 2 - this.y ** 2
+        this.fitness = Math.sqrt((this.x) ** 2 + (this.y) ** 2);
+
         return this.fitness
     }
 }
