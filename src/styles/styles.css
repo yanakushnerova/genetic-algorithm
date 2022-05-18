@@ -19,15 +19,16 @@ button {
     font-size: large;
 }
 
-#solution {
+#solution, #solution2 {
     width: 500px;
     height: 500px;
     margin-top: 50px;
 }
 
-#solution-container {
+#solution-container, #solution-container-2 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }

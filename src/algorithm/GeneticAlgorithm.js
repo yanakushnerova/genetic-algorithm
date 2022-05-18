@@ -14,6 +14,8 @@ export default class GeneticAlgorithm {
         this.maxFitnessValues = [] 
         this.meanFitnessValues = [] 
         this.currentFitnessValues = []
+        this.bestChromosomes = []
+        this.functionPoints = []
     }
 
     selection() {
@@ -57,5 +59,9 @@ export default class GeneticAlgorithm {
         this.currentFitnessValues = this.population.map(individual => individual.getFitness());
         this.meanFitnessValues.push(this.currentFitnessValues.reduce((acc, cur) => acc + cur, 0) / this.population.length)
         this.maxFitnessValues.push(Math.max(...this.currentFitnessValues))
+        this.bestChromosomes.push(this.population.find(chromosome => chromosome.fitness === this.maxFitnessValues[this.maxFitnessValues.length - 1]))
+    
+        const point = this.population[Math.floor(this.populationSize / 3)]
+        this.functionPoints.push({x: point.x, y: point.y})
     }
 }
